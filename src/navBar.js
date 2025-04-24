@@ -15,10 +15,10 @@ const Navbar = () => {
         <li><a href="/contact">Contact</a></li>
       </ul>
       <div className="navbar-icons">
-        <a href="https://github.com/ton-profil" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/AmandineGUISY" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/amandine-guisy-developpeur-web-mobile/" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </div>

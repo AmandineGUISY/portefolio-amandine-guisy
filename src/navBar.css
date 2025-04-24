@@ -1,45 +1,64 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(86, 53, 153);
-    padding: 1rem 2rem;
-    color: white;
-  }
-  
-  .navbar-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .navbar-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .navbar-links li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-links li a:hover {
-    color:rgb(86, 53, 153);
-  }
-  
-  .navbar-icons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .navbar-icons a {
-    color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-  
-  .navbar-icons a:hover {
-    color: rgb(204, 178, 255);
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(86, 53, 153);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar-links li {
+  position: relative;
+}
+
+.navbar-links li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  padding-bottom: 10px;
+}
+
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(204, 178, 255);
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar-links li a:hover {
+  color: rgb(204, 178, 255);
+}
+
+.navbar-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-icons a {
+  color: white;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-icons a:hover {
+  color: rgb(204, 178, 255);
+}
