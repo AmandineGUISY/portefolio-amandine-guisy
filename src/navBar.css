@@ -62,3 +62,65 @@
 .navbar-icons a:hover {
   color: rgb(204, 178, 255);
 }
+
+.burger-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: rgb(86, 53, 153);
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease;
+  padding: 5rem 2rem 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.mobile-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* hide the destop menu on mobile */
+@media (max-width: 768px) {
+  .navbar-links,
+  .navbar-icons:not(.mobile-icons) {
+    display: none;
+  }
+}
+
+/* hide the burger menu on mobile */
+@media (min-width: 769px) {
+  .burger-button,
+  .mobile-menu {
+    display: none;
+  }
+}
